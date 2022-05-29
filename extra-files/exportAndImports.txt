@@ -1,0 +1,44 @@
+Exports and Imports
+Enables you to make modular code by isolating specific functionality to a given module.
+
+You must export the property/method and then import it into the file you want to use.
+
+To export there are two way of doing so: implicitly and explicitly. 
+
+To export explicitly, you must use the default keyword. 
+
+This is an example of the person.js file
+=======================================================
+const person = {
+	name: 'Christine'
+}
+
+export default person;
+=======================================================
+
+
+This is an example of the utility.js file
+=======================================================
+export const clean = () => {...};
+
+export const baseData = 10;
+
+=======================================================
+
+
+This is an example of the app.js file
+=======================================================
+import person from './person.js'; 	// the reference name here can be anything. Only imports
+									// the default that was exported. That is why we can
+									// have multiple names/instances.
+									
+import prsn from './person.js';
+
+import {baseData} from './utility.js';  // here the reference name in {} has to refer to  
+										// the property that you are referencing.
+										
+import {clean} from './utility.js';		// Export the NAME as defined by export
+
+import {clean as cleanData} from './utility.js';	// cleanData is an alias
+
+import * as bundled from './utility.js';	// Export everything
