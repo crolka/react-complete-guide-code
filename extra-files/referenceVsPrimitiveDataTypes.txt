@@ -1,0 +1,3 @@
+Primitive: actually copies the value
+
+Reference: references the original by using a pointer. Just like in other OO languages

@@ -1,0 +1,31 @@
+Spread and Rest operator: ... (the three dots are the operator)
+
+the ... operator is the same for spread and rest operations but
+it depends on the context in which it is used as to whether it 
+operates as a spread operation or rest operation.
+
+Spread: used to split up array elements OR object properties.
+	Examples:
+	const newArray = [...oldArray, 1, 2]
+	const newObject = {...oldObject, newProp: 5}
+	
+	what this does is to allow us to create a new array/object using the
+	data from the old array while adding new elements/properties.
+	
+	The elements in oldArray are unpacked and used to create the first
+	n number of elements of the new array, or properties in an object. 
+	Then element values 1 and 2 are added to the array. Similar to split 
+	in Python.
+	
+	The new property in the second example will overwrite any existing
+	properties in the oldObject with the same name. The new properties
+	provided always take precedence.
+
+Rest: Used to merge a list of function arguments into an array
+	function sortArgs(...args){
+		return args.sort()
+	}
+	
+	can pass an unlimited arguments. When defining the method, we define one
+	parameter variable. All values passed into the method are combined as an
+	array. Then you can apply array methods to work with the arguments.

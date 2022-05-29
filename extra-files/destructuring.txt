@@ -1,0 +1,6 @@
+A method to easily extract array elements or object properties and and stores them in 
+variables.
+
+Similar to Spread, however the key difference is that you are allowed to pull out single
+elements and store them in variables. Spread acts on the entire array/object. ALL elements/
+properties are pulled out of the array/object and distributed into a new variable.
